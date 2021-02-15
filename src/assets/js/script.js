@@ -356,7 +356,7 @@ function jeu(){
     ctx.fillText('Level: ' + level, 10, 90);
 
     if (newLevel) {
-      ctx.fillStyle = '#98D2F2';
+      ctx.fillStyle = '#0f0';
       ctx.strokeStyle = '#000';
       ctx.font = '2.5rem Arial';
       ctx.textAlign = 'center';
