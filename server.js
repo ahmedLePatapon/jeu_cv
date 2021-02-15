@@ -7,6 +7,12 @@ const BaseRouter = require('./routes');
 
 const app = express();
 
+// Security
+if (process.env.NODE_ENV === 'production') {
+  app.use(helmet());
+}
+
+app.disable('x-powered-by');
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
@@ -20,17 +26,6 @@ if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 app.use(favicon(path.join(__dirname, './src/assets/images', 'favicon.ico')));
-// Security
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(
-//     helmet.contentSecurityPolicy({
-//       directives: {
-//         defaultSrc: ["'self'"],
-//         scriptSrc: ["'self'"],
-//       },
-//     })
-//   );
-// }
 
 app.use('/', BaseRouter);
 
