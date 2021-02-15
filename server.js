@@ -12,7 +12,6 @@ if (process.env.NODE_ENV === 'production') {
   app.use(
     helmet.contentSecurityPolicy({
       directives: {
-        defaultSrc: ["'self'"],
         scriptSrc: ["'self'", "https:"],
         fontSrc: ["'self'", "https:"],
         styleSrc: ["'self'", "https:"],
