@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'src'), { index: false }));
+app.use('/jquery', express.static(path.join(__dirname, '/node_modules/jquery/dist/')));
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
