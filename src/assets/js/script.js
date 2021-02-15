@@ -7,7 +7,18 @@ let timer;
 // let timerJeu;
 
 window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-
+CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+  if (w < 2 * r) r = w / 2;
+  if (h < 2 * r) r = h / 2;
+  this.beginPath();
+  this.moveTo(x+r, y);
+  this.arcTo(x+w, y,   x+w, y+h, r);
+  this.arcTo(x+w, y+h, x,   y+h, r);
+  this.arcTo(x,   y+h, x,   y,   r);
+  this.arcTo(x,   y,   x+w, y,   r);
+  this.closePath();
+  return this;
+};
 function clic(){
   document.getElementById('wrap').style.display='none';
   document.getElementById('button2').style.display='none';
@@ -354,14 +365,19 @@ function jeu(){
     //dessine le level
     ctx.font = '16px Arial';
     ctx.fillText('Level: ' + level, 10, 90);
-
+    
     if (newLevel) {
+      // dessine un fond en rectangle pr le message en haut  droite 
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
+      ctx.roundRect(460, 10, 430, 50, 5).fill();
+
+      // dessine le message dans le rectangle 
       ctx.fillStyle = '#0f0';
       ctx.strokeStyle = '#000';
       ctx.font = '2.5rem Arial';
       ctx.textAlign = 'center';
-      ctx.fillText('Un nouvel element à été debloquer', 675, 30);
-      ctx.strokeText('Un nouvel element à été debloquer', 675, 30);
+      ctx.fillText('Un nouvel element à été debloquer', 675, 43);
+      ctx.strokeText('Un nouvel element à été debloquer', 675, 43);
     }
 
     // Tant que le timer est supérieur à 0, on continue
@@ -371,7 +387,7 @@ function jeu(){
       ctx.fillStyle = '#f00';
       ctx.strokeStyle = '#000';
       ctx.textAlign = 'center';
-      ctx.font = '30px Arial';
+      ctx.font = 'bold 30px Arial';
       ctx.fillText(`Votre score est de ${score}`, w/2, h/2);
       ctx.strokeText(`Votre score est de ${score}`, w/2, h/2);
     }
