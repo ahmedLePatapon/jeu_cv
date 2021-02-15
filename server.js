@@ -9,16 +9,7 @@ const app = express();
 
 // Security
 if (process.env.NODE_ENV === 'production') {
-  app.use(
-    helmet.contentSecurityPolicy({
-      directives: {
-        defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", "'https://maxcdn.bootstrapcdn.com'"],
-        fontSrc: ["'self'", "'https://fonts.googleapis.com'", "data:"],
-        styleSrc: ["'self'", "'https://maxcdn.bootstrapcdn.com'"],
-      }
-    })
-  );
+  app.use(helmet());
 }
 
 app.disable('x-powered-by');
