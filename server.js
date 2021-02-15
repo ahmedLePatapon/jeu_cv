@@ -13,8 +13,8 @@ app.use(cookieParser());
 
 app.set('view engine', 'pug');
 
-app.use(express.static(path.join(__dirname, 'src'), { index: false }));
-app.use('/jquery', express.static(path.join(__dirname, '/node_modules/jquery/dist/')));
+app.use(express.static(path.join(__dirname, './src'), { index: false }));
+app.use('/jquery', express.static(path.join(__dirname, './node_modules/jquery/dist/')));
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
