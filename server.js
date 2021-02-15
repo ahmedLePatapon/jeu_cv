@@ -2,7 +2,6 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const helmet = require('helmet');
-const morgan = require('morgan');
 const BaseRouter = require('./routes');
 const app = express();
 
