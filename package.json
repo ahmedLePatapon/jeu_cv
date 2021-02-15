@@ -1,5 +1,5 @@
 {
-  "name": "jeu cv",
+  "name": "pikeuhbulle",
   "version": "1.2.0",
   "description": "Jeu conçu dans le cadre de ma formation developpeur web fullstack. Il conciste à exploser des boules pour debloquer les différentes élèments que compose mon cv. ",
   "main": "index.js",
