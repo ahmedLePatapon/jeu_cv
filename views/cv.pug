@@ -1,0 +1,202 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  // Latest compiled and minified CSS
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous')
+  // Optional theme
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css' integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp' crossorigin='anonymous')
+  link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous')
+  link(rel='stylesheet' href='path/to/font-awesome/css/font-awesome.min.css')
+  link(href='https://fonts.googleapis.com/css?family=Montserrat:200,400|Open+Sans|Russo+One' rel='stylesheet')
+  link(rel='stylesheet' href='./assets/css/style_cv.css')
+  title CV
+.container-fluid
+  // <div id="fond_cv"><img  src="fond_cv.jpg" ></img></div>
+  .row
+    header#menu-gauche.col-lg-4.col-md-4.col-xs-4.text-right
+      #identite
+        h1
+          | Ahmed 
+          span#nom BENLEBNA
+        h2 D&eacute;veloppeur web full stack js
+      // Navigation
+      nav
+        ul
+          li
+            a.page-scroll(href='#presentation')
+              | pr&eacute;sentation 
+              span
+                i.fa.fa-id-card-o(aria-hidden='true')
+          li
+            a.page-scroll(href='#competences')
+              | comp&eacute;tences 
+              span
+                i.fa.fa-suitcase(aria-hidden='true')
+          li
+            a.page-scroll(href='#experiences')
+              | exp&eacute;riences 
+              span
+                i.fa.fa-flask(aria-hidden='true')
+          li
+            a.page-scroll(href='#formation')
+              | formation 
+              span
+                i.fa.fa-graduation-cap(aria-hidden='true')
+          li
+            a.page-scroll(href='#langues')
+              | langues 
+              span
+                i.fa.fa-comment(aria-hidden='true')
+          li
+            a.page-scroll(href='#contact')
+              | Contact 
+              span
+                i.fa.fa-envelope(aria-hidden='true')
+          li
+            a.page-scroll(href='#')
+              | cv 
+              span
+                i.fa.fa-file-text(aria-hidden='true')
+          li
+            a(href='/')
+              | Jeu
+              span
+                i.fa.fa-gamepad(aria-hidden='true')
+    // Présentation
+    section#corps.col-lg-5.col-lg-offset-5
+      .taille
+        #presentation
+          img.img-responsive(src='./assets/images/moi_cv.jpg' alt='photo cool, en gros plan, de moi en train de prendre une photo')
+          .arriere.text-white
+            #gauche.bloc
+              h4 A Propos
+              p.text-white
+                | Trentenaire dynamique enrichi de mes exp&eacute;riences pass&eacute;es, j&apos;ai trouv&eacute; ma voie : un
+                | m&eacute;tier dans lequel je m&apos;&eacute;panouis pleinement. Jeune pousse dans la programmation, je suis toujours &agrave; la
+                | recherche des derni&egrave;res tendances pour rester sur la bonne voie. S&eacute;rieux et organis&eacute; dans mon travail,
+                | je pense apporter une bonne ambiance dans un groupe grace &agrave; ma bonne humeur.
+            .bloc.text-white
+              h4 Sinon
+              p
+                | Photographe &agrave; mes heures perdues. Jetez un oeil &agrave; mon 
+                a(href='https://www.linkedin.com/in/ahmed-benlebna/') LinkedIn
+                | , ajoutez-moi et n&apos;h&eacute;sitez pas &agrave; me
+                |                   contacter si vous voulez plus de renseignements.
+      // Competences
+      .taille
+        #competences.arriere
+          h4.text-white Comp&eacute;tences
+          h3.progress-title.text-white
+            | HTML 
+            i.fa.fa-html5(aria-hidden='true')
+            | / CSS 
+            i.fa.fa-css3(aria-hidden='true')
+          .progress.skill-bar
+            .progress-bar.progress-bar-warning(role='progressbar' aria-valuenow='80' aria-valuemin='0' aria-valuemax='100')
+              span.skill
+                i.val
+          h3.progress-title.text-white javascript
+          .progress.skill-bar
+            .progress-bar.progress-bar-warning(role='progressbar' aria-valuenow='80' aria-valuemin='0' aria-valuemax='100')
+              span.skill
+                i.val
+          h3.progress-title.text-white Node Js
+          .progress.skill-bar
+            .progress-bar.progress-bar-warning(role='progressbar' aria-valuenow='45' aria-valuemin='0' aria-valuemax='100')
+              span.skill
+                i.val
+          h3.progress-title.text-white framework
+          .progress.skill-bar
+            .progress-bar.progress-bar-warning(role='progressbar' aria-valuenow='63' aria-valuemin='0' aria-valuemax='100')
+              span.skill
+                i.val
+          h3.progress-title.text-white r&eacute;f&eacute;rencement
+          .progress.skill-bar
+            .progress-bar.progress-bar-warning(role='progressbar' aria-valuenow='80' aria-valuemin='0' aria-valuemax='100')
+              span.skill
+                i.val
+      // Experiences
+      #experiences.taille.text-white.row
+        .arriere.col-lg-12
+          h4 Exp&eacute;riences
+          .col-md-12
+            h5 Technicien de maintenance des syst&egrave;mes automatis&eacute;s
+            p CLEAN CAR sarl
+            p 2008 - 2016
+          .col-md-12
+            h5 Monteur &ndash; contr&ocirc;leur
+            p GILSON s.a.s
+            p 2006
+          .col-md-12
+            h5 Manutentionnaire
+            p MANPOWER
+            p 2005
+          .col-md-12
+            h5 Agent recenseur
+            p Mairie d&rsquo;Ezanville
+            p 2005
+      #formation.taille
+        .arriere.text-white
+          div
+            h4 Formation
+            h5 DEVELOPPEUR FULLSTACK JS
+            p 2017 Dipl&ocirc;me RNCP NIVEAU II
+            p
+              | IFOCOP Paris, Responsable de formation:
+              | Fabienne THIRY - 01 40 21 83 78 - fthiry@ifocop.fr
+          hr(style='border: 1px solid white')
+          div
+            h5 INTEGRATEUR WEB
+            p 2016 
+            p ESIC, Paris 14&eacute;me.
+      #langues.taille
+        .arriere.text-white
+          h4 Langues
+          p Anglais professionel.
+          p Francais langue maternelle.
+      #contact.taille
+        .arriere.text-white
+          h4 Contact
+          .row.text-white
+            .col-md-6.bloc
+              p
+                | N&apos;h&eacute;sitez pas &agrave; me contacter. Je suis disponible tous les jours de la semaine sauf le dimanche, jour
+                | de repos.
+              br
+              p
+                b Email
+                | : 
+                i ahmed.benlebna@gmail.com
+              br
+              p
+                b Tel
+                | : 
+                i 06.98.07.68.66
+              br
+              p
+                a(href='https://codepen.io/ahmedLePatapon/#')
+                  i.fa.fa-codepen(aria-hidden='true')
+                a(href='https://www.linkedin.com/in/ahmed-benlebna/')
+                  i.fa.fa-linkedin-square(aria-hidden='true')
+                a(href='https://www.flickr.com/photos/92606208@N03/')
+                  i.fa.fa-flickr(aria-hidden='true')
+              br
+              br
+            form.col-md-6
+              .form-group
+                input#exampleInputEmail1.form-control(type='name' placeholder='Nom')
+              .form-group
+                input#exampleInputEmail1.form-control(type='email' placeholder='Email')
+              textarea.form-control(rows='3' placeholder='Message')
+              button.btn.btn-default(type='submit') ENVOYER
+              p(style='margin-top:15px')
+                i
+                  | D&eacute;sol&eacute; ce formulaire ne fonctionne pas encore, utilisez directement mon 
+                  a(href='mailto:ahmed.benlebna@gmail.com') adresse mail
+                  |  ou via 
+                  a(href='https://www.linkedin.com/in/ahmed-benlebna/') LinkedIn
+script(src='/jquery/jquery.js')
+// Latest compiled and minified JavaScript
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous')
+script(src='./assets/js/script_cv.js')

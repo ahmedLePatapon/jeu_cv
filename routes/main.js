@@ -4,8 +4,8 @@ const router = Router();
 
 router.get('/index', (req, res) => res.redirect('/'));
 
-router.get('/', (req, res) => fs.readFile('./views/index.html', 'utf8', (err, text) => res.send(text)));
+router.get('/', (req, res) => res.render('index'));
 
-router.get('/cv', (req, res) => fs.readFile('./views/cv.html', 'utf8', (err, text) => res.send(text)));
+router.get('/cv', (req, res) => res.render('cv'));
 
 module.exports = router;
