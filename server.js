@@ -9,7 +9,12 @@ const app = express();
 
 // Security
 if (process.env.NODE_ENV === 'production') {
-  app.use(helmet());
+  app.use(helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'"],
+    }
+  }));
 }
 
 app.disable('x-powered-by');
