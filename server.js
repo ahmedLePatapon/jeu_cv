@@ -12,9 +12,10 @@ if (process.env.NODE_ENV === 'production') {
   app.use(
     helmet.contentSecurityPolicy({
       directives: {
-        scriptSrc: ["'self'", "https:"],
-        fontSrc: ["'self'", "https:"],
-        styleSrc: ["'self'", "https:"],
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", 'maxcdn.bootstrapcdn.com'],
+        fontSrc: ["'self'", 'fonts.googleapis.com'],
+        styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com'],
       }
     })
   );
