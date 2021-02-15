@@ -13,9 +13,9 @@ if (process.env.NODE_ENV === 'production') {
     helmet.contentSecurityPolicy({
       directives: {
         defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", 'https://maxcdn.bootstrapcdn.com'],
-        fontSrc: ["'self'", 'https://fonts.googleapis.com', 'data:'],
-        styleSrc: ["'self'", 'https://maxcdn.bootstrapcdn.com'],
+        scriptSrc: ["'self'", "'https://maxcdn.bootstrapcdn.com'"],
+        fontSrc: ["'self'", "'https://fonts.googleapis.com'", "data:"],
+        styleSrc: ["'self'", "'https://maxcdn.bootstrapcdn.com'"],
       }
     })
   );
