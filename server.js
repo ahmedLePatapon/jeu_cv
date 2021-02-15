@@ -5,11 +5,12 @@ const helmet = require('helmet');
 const BaseRouter = require('./routes');
 const app = express();
 
-
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
+
 app.set('view engine', 'pug');
+
 app.use(express.static(path.join(__dirname, 'src'), { index: false }));
 app.use('/jquery', express.static(path.join(__dirname, '/node_modules/jquery/dist/')));
 

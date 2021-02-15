@@ -20,6 +20,5 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "ahmed Lepatapon"
 }
