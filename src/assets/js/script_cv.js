@@ -8,4 +8,7 @@ $(document).ready(function() {
         let anchor = $(this).attr('href');
         scrollToAnchor(anchor);
     });
+    $('.progress .progress-bar').css("width", function() {
+        return $(this).attr("aria-valuenow") + "%";
+    });
 });
