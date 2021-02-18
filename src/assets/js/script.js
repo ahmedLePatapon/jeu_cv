@@ -422,8 +422,7 @@ $(document).ready(function() {
 });
 
 $(document).on('click',function() {
-  $('.progress .progress-bar').css("width",
-    function() {
+  $('.progress .progress-bar').css("width", function() {
       return $(this).attr("aria-valuenow") + "%";
-    });
+  });
 });
